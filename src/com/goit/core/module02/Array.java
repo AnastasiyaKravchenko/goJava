@@ -4,36 +4,36 @@ public class Array {
     public static void main(String[] args) {
 
         int[] array ={21, 8, 12, 1, -6, 3, -4, 18, 25, 2 };
-        double[] array1 ={2.5, 0.8, 5.12, -10.33, -6.8, 3.3, 71.14, -0.18, 9.221, 3.12 };
+        double[] array1 ={5.12, 0.8, 2.2, -10.33, -6.8, 3.3, 71.14, -0.18, -9.221, 3.12 };
         System.out.println("--------int sum---------");
-        sum(array);
+        System.out.println(sum(array));
         System.out.println("--------int min---------");
-        min(array);
+        System.out.println(min(array));
         System.out.println("--------int max---------");
-        max(array);
+        System.out.println(max(array));
         System.out.println("--------int maxPositive---------");
-        maxPositive(array);
+        System.out.println(maxPositive(array));
         System.out.println("--------int multiplication---------");
-        multiplication(array);
+        System.out.println(multiplication(array));
         System.out.println("--------int modulus---------");
-        modulus(array);
+        System.out.println(modulus(array));
         System.out.println("--------int secondLargest---------");
-        secondLargest(array);
+        System.out.println(secondLargest(array));
         System.out.println("====================================");
         System.out.println("--------double sum---------");
-        sum(array1);
+        System.out.println(sum(array1));
         System.out.println("--------double min---------");
-        min(array1);
+        System.out.println(min(array1));
         System.out.println("--------double max---------");
-        max(array1);
+        System.out.println(max(array1));
         System.out.println("--------double maxPositive---------");
-        maxPositive(array1);
+        System.out.println(maxPositive(array1));
         System.out.println("--------double multiplication---------");
-        multiplication(array1);
+        System.out.println(multiplication(array1));
         System.out.println("--------double modulus---------");
-        modulus(array1);
+        System.out.println(modulus(array1));
         System.out.println("--------double secondLargest---------");
-        secondLargest(array1);
+        System.out.println(secondLargest(array1));
     }
 
     //sum int
@@ -47,8 +47,8 @@ public class Array {
            count++;
         }
 
-        System.out.println(sum);
-        return 0;
+
+        return sum;
     }
 
 
@@ -64,8 +64,7 @@ public class Array {
             count++;
         }
 
-        System.out.println(min);
-        return 0;
+        return min;
     }
 
     //max int
@@ -80,8 +79,7 @@ public class Array {
             count++;
         }
 
-        System.out.println(max);
-        return 0;
+        return max;
     }
 
     //maxPositive
@@ -96,14 +94,13 @@ public class Array {
             count++;
         }
 
-        System.out.println(max);
-        return 0;
+        return max;
     }
 
     //multiplication
 
     static int multiplication(int[]array) {
-        int count=0;
+        int count=1;
         int mult=1;
 
         while(count<array.length)
@@ -112,15 +109,13 @@ public class Array {
             count++;
         }
 
-        System.out.println(mult);
-        return 0;
+        return mult;
     }
 
     //modulus of first and last element
     static int modulus(int[]array) {
-        int mod=array[0]%array[9];
-        System.out.println(mod);
-        return 0;
+        int mod=array[0]%array[array.length-1];
+        return mod;
     }
 
     //second largest element
@@ -141,8 +136,8 @@ public class Array {
 
             count++;
         }
-        System.out.println(max2);
-        return 0;
+
+        return max2;
     }
 
 
@@ -160,8 +155,7 @@ public class Array {
             count++;
         }
 
-        System.out.println(sum);
-        return 0;
+        return sum;
     }
 
 
@@ -177,8 +171,7 @@ public class Array {
             count++;
         }
 
-        System.out.println(min);
-        return 0;
+        return min;
     }
 
     //max int
@@ -193,8 +186,7 @@ public class Array {
             count++;
         }
 
-        System.out.println(max);
-        return 0;
+        return max;
     }
 
     //maxPositive double
@@ -209,8 +201,7 @@ public class Array {
             count++;
         }
 
-        System.out.println(max);
-        return 0;
+        return max;
     }
 
     //multiplication double
@@ -225,15 +216,13 @@ public class Array {
             count++;
         }
 
-        System.out.println(mult);
-        return 0;
+        return mult;
     }
 
     //modulus of first and last element double
     static double modulus(double[]array1) {
-        double mod=array1[0]%array1[9];
-        System.out.println(mod);
-        return 0;
+        double mod=array1[0]%array1[array1.length-1];
+        return mod;
     }
 
     //second largest element double
@@ -254,8 +243,7 @@ public class Array {
 
             count++;
         }
-        System.out.println(max2);
-        return 0;
+        return max2;
     }
 }
 
