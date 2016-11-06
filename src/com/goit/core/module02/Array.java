@@ -1,5 +1,6 @@
 package com.goit.core.module02;
 import java.util.Arrays;
+//new commit
 public class Array {
     public static void main(String[] args) {
 
