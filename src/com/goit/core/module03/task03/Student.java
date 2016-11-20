@@ -17,7 +17,8 @@ public class Student {
 
     public Student(String lastName, Course[] coursesTaken) {
         this.lastName = lastName;
-        this.coursesTaken = coursesTaken;
+        this.coursesTaken=new Course[coursesTaken.length] ;
+        System.arraycopy(coursesTaken,0,this.coursesTaken,0,coursesTaken.length);
     }
 
     public String getFirstName() {
@@ -53,7 +54,7 @@ public class Student {
     }
 
     public void setCoursesTaken(Course[] coursesTaken) {
-        this.coursesTaken = coursesTaken;
+        System.arraycopy(coursesTaken,0,this.coursesTaken,0,coursesTaken.length);
     }
 
     public void setAge(int age) {

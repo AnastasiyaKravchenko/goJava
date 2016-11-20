@@ -10,7 +10,6 @@ public class User {
     String currency;
 
 
-
     public User(String name, int balance, int monthsOfEmployment, String companyName, int salary, String currency) {
         this.name = name;
         this.balance = balance;
@@ -21,33 +20,34 @@ public class User {
     }
 
 
-
-     void paySalary(){
-        int sum=balance+salary;
-        System.out.println("Salary balance= "+sum);
+    void paySalary() {
+        int sum = balance + salary;
+        balance += salary;
+        System.out.println("Salary balance= " + sum);
 
     }
 
-      void withdraw(int summ){
-          if(summ<1000)
-              balance=balance-(balance*5)/100;
-          else
-              balance=balance-(balance*10)/100;
-          System.out.println("Balance with withdraw= "+balance);
+    void withdraw(int summ) {
+        if (summ < 1000)
+            balance = balance - (balance * 5) / 100;
+        else
+            balance = balance - (balance * 10) / 100;
+        System.out.println("Balance with withdraw= " + balance);
     }
 
     void companyNameLenght(String companyName) {
-        int count = 0;
 
         int length = companyName.length();
         System.out.println("Length of company name= " + length);
     }
 
 
-    void monthIncreaser(int addMonth){
-        System.out.println("New amount months of employment= "+(monthsOfEmployment+addMonth));
+    void monthIncreaser(int addMonth) {
+        monthsOfEmployment += addMonth;
+        System.out.println("New amount months of employment= " + monthsOfEmployment);
     }
-//---------------------------------------------------------------------------
+
+    //---------------------------------------------------------------------------
     public String getName() {
         return name;
     }

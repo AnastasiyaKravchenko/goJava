@@ -1,4 +1,5 @@
 package com.goit.core.module03.task03;
+
 import java.util.Date;
 
 public class Course {

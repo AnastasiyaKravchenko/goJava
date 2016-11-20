@@ -1,7 +1,7 @@
 package com.goit.core.module03.task03;
 
 
-public class SpecialStudent extends CollegeStudent{
+public class SpecialStudent extends CollegeStudent {
     private long secretKey;
     private String email;
 
