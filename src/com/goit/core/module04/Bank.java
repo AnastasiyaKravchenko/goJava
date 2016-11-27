@@ -3,13 +3,13 @@ package com.goit.core.module04;
 
 public abstract class Bank {
 
-    long id;
-    String bankCountry;
-    Currency currency;
-    int numberOfEmployees;
-    double avrSalaryOfEmployee;
-    long rating;
-    long totalCapital;
+   protected  long id;
+    protected String bankCountry;
+    protected Currency currency;
+    protected int numberOfEmployees;
+    protected double avrSalaryOfEmployee;
+    protected long rating;
+    protected long totalCapital;
 
     public Bank(long id, String bankCountry, Currency currency, int numberOfEmployees, double avrSalaryOfEmployee, long rating, long totalCapital) {
         this.id = id;
