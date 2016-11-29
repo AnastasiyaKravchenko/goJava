@@ -1,4 +1,4 @@
-package com.goit.core.module05;
+package com.goit.core.module05.Entity;
 
 import java.util.Date;
 
@@ -91,8 +91,5 @@ public class Room {
         this.cityName = cityName;
     }
 
-    @Override
-    public String toString() {
-        return getId()+" "+getCityName()+" "+getHotelName()+" "+getDateAvailableFrom()+" "+getPrice();
-    }
+
 }

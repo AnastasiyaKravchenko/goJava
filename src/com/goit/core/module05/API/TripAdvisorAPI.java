@@ -1,4 +1,6 @@
-package com.goit.core.module05;
+package com.goit.core.module05.API;
+
+import com.goit.core.module05.Entity.Room;
 
 import java.util.Date;
 
@@ -6,9 +8,9 @@ import java.util.Date;
  * Created by Mala on 11/27/2016.
  */
 public class TripAdvisorAPI implements API {
-   static Room[] rooms=new Room[5];
+   static private final Room[] rooms=new Room[5];
 
-    public TripAdvisorAPI() {
+    static  {
         Room quad = new Room(101,8000,4, new Date(),"HILTON ","KYIV");
         rooms[0] = quad;
         Room twin =new  Room(102,500,4, new Date(), "MIRRORS DESIGN HOTEL","KYIV");
@@ -26,12 +28,18 @@ public class TripAdvisorAPI implements API {
         Room[] found = new Room[rooms.length];
         int count = 0;
         for (int i = 0; i < rooms.length; i++) {
-            if (rooms[i].getPrice() <= price && (persons <= rooms[i].getPersons()) && ((city.equals(rooms[i].getCityName())) && (hotel.equals(rooms[i].getHotelName())))) {
+            if (rooms[i].getPrice() <= price &&
+                    (persons <= rooms[i].getPersons()) &&
+                    ((city.equals(rooms[i].getCityName())) &&
+                            (hotel.equals(rooms[i].getHotelName())))) {
                 found[count] = rooms[i];
                 count++;
             }
         }
-        return found;
+        Room[] finalFound=new Room[count];
+        if (count != 0)
+            System.arraycopy(found, 0, finalFound, 0, finalFound.length);
+        return finalFound;
     }
 
     @Override
