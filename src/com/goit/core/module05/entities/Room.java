@@ -1,4 +1,4 @@
-package com.goit.core.module05;
+package com.goit.core.module05.entities;
 
 import java.util.Date;
 
@@ -6,12 +6,12 @@ import java.util.Date;
  * Created by Mala on 11/27/2016.
  */
 public class Room {
-    long id;
-    int price;
-    int persons;
-    Date dateAvailableFrom;
-    String hotelName;
-    String cityName;
+    private long id;
+    private int price;
+    private int persons;
+    private Date dateAvailableFrom;
+    private String hotelName;
+    private String cityName;
 
     public Room(long id, int price, int persons, Date dateAvailableFrom, String hotelName, String cityName) {
         this.id = id;
