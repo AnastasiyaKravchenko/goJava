@@ -1,4 +1,6 @@
-package com.goit.core.module05;
+package com.goit.core.module05.dao;
+
+import com.goit.core.module05.entities.Room;
 
 /**
  * Created by Mala on 11/28/2016.
