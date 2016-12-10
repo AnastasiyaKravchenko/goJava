@@ -37,7 +37,6 @@ public class User {
 
         User user = (User) o;
 
-        if (id != user.id) return false;
         if (salary != user.salary) return false;
         if (balance != user.balance) return false;
         if (!firstName.equals(user.firstName)) return false;

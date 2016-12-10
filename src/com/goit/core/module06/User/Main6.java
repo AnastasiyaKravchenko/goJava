@@ -14,18 +14,18 @@ public class Main6 {
         User user3 = new User(3, "cc", "oooddo", 2000, 3000);
         User user4 = new User(4, "cc", "oooddo", 2000, 3000);
 
-        User[] users = {user1, user2, user3};
+        User[] users = {user1, user2, user3, user4};
 
         System.out.println("Unique users: ");
         System.out.println(Arrays.toString(UserUtils.uniqueUsers(users)));
-        System.out.println("Conditional balance: ");
-        System.out.println(Arrays.toString(UserUtils.usersWithContitionalBalance(users,500)));
-        System.out.println("Deleting of empty users: ");
-        //System.out.println(Arrays.toString(UserUtils.deleteEmptyUsers(users)));
-        System.out.println("Users id: ");
-        System.out.println(Arrays.toString(UserUtils.getUsersId(users)));
-        System.out.println("Balance after salary: ");
-        System.out.println(Arrays.toString(UserUtils.paySalaryToUsers(users)));
+//        System.out.println("Conditional balance: ");
+//        System.out.println(Arrays.toString(UserUtils.usersWithContitionalBalance(users,500)));
+//        System.out.println("Deleting of empty users: ");
+//        System.out.println(Arrays.toString(UserUtils.deleteEmptyUsers(users)));
+//        System.out.println("Users id: ");
+//        System.out.println(Arrays.toString(UserUtils.getUsersId(users)));
+//        System.out.println("Balance after salary: ");
+//        System.out.println(Arrays.toString(UserUtils.paySalaryToUsers(users)));
 
     }
 }
