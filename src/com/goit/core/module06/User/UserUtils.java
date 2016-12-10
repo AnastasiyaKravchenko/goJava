@@ -8,23 +8,28 @@ public class UserUtils {
 
     public static User[] uniqueUsers(User[] users) {
         int count = 0;
-        User[] result = new User[users.length];
+        int n = 0;
+        User[] res = new User[users.length];
         for (int i = 0; i < users.length; i++) {
-            for (int j = i+1; j < users.length; j++) {
+            count = 0;
+            for (int j = 0; j < users.length; j++) {
                 if (users[i].equals(users[j])) {
-                    result[count] = users[i];
                     count++;
                 }
             }
+            if (count == 1) {
+                n++;
+                res[n] = users[i];
+            }
         }
-//        System.out.println(Arrays.toString(result));
-        User[] finalResult=new User[count];
-        if(count!=0)
-            System.arraycopy(result, 0, finalResult, 0, count);
-        else
-            System.out.println("No one similar user");
-
-        return finalResult;
+        User[] result = new User[n];
+        for (int i = 0, m=0; i < res.length; i++) {
+            if (res[i] != null) {
+                result[m] = res[i];
+                m++;
+            }
+        }
+        return result;
     }
 
 
