@@ -13,9 +13,8 @@ public class UserUtils {
         for (int i = 0; i < users.length; i++) {
             count = 0;
             for (int j = 0; j < users.length; j++) {
-                if (users[i].equals(users[j])) {
+                if (users[i].equals(users[j]))
                     count++;
-                }
             }
             if (count == 1) {
                 n++;

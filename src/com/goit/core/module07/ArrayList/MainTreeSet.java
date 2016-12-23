@@ -1,4 +1,4 @@
-package com.goit.core.module07;
+package com.goit.core.module07.ArrayList;
 
 import com.goit.core.module04.Currency;
 
@@ -58,7 +58,7 @@ public class MainTreeSet {
         Iterator<Order> iterator = set.iterator();
         while (iterator.hasNext()) {
             Order element = iterator.next();
-            if (element.currency == Currency.USD) {
+            if (element.getCurrency() == Currency.USD) {
                 iterator.remove();
             }
         }
@@ -75,7 +75,7 @@ public class MainTreeSet {
     public static boolean containLastName(Set<Order> set, String lastName) {
         boolean flag=false;
         for (Order order : set) {
-            if (order.user.lastName.contains(lastName))
+            if (order.getUser().getLastName().contains(lastName))
                 flag= true;
         }
         return true;

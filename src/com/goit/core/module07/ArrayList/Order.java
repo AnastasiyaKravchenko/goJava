@@ -1,4 +1,4 @@
-package com.goit.core.module07;
+package com.goit.core.module07.ArrayList;
 
 import com.goit.core.module04.Currency;
 
@@ -7,11 +7,11 @@ import com.goit.core.module04.Currency;
  */
 public class Order implements Comparable<Order>{
     private long id;
-    protected int price;
-    protected Currency currency;
-    protected String itemName;
-    protected String shopIdentificator;
-    protected User user;
+    private int price;
+    private Currency currency;
+    private String itemName;
+    private String shopIdentificator;
+    private User user;
 
     public Order(long id, int price, Currency currency, String itemName, String shopIdentificator, User user) {
         this.id = id;
@@ -39,5 +39,27 @@ public class Order implements Comparable<Order>{
         return this.price - o.price;
     }
 
+    public long getId() {
+        return id;
+    }
 
+    public int getPrice() {
+        return price;
+    }
+
+    public Currency getCurrency() {
+        return currency;
+    }
+
+    public String getItemName() {
+        return itemName;
+    }
+
+    public String getShopIdentificator() {
+        return shopIdentificator;
+    }
+
+    public User getUser() {
+        return user;
+    }
 }

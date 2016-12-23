@@ -1,4 +1,4 @@
-package com.goit.core.module07;
+package com.goit.core.module07.ArrayList;
 
 import java.util.*;
 
