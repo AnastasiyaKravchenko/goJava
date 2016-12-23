@@ -5,49 +5,47 @@ import com.goit.core.module05.API.BookingComAPI;
 import com.goit.core.module05.API.TripAdvisorAPI;
 import com.goit.core.module05.API.GoogleAPI;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by Mala on 11/28/2016.
  */
 public class Controller {
-    API apis[] = new API[3];
+    List<API> apis = new ArrayList<>();
 
     public Controller() {
-        API api1 = new BookingComAPI();
-        apis[0] = api1;
-        API api2 = new TripAdvisorAPI();
-        apis[1] = api2;
-        API api3 = new GoogleAPI();
-        apis[2] = api3;
+        apis.add(new BookingComAPI());
+        apis.add(new TripAdvisorAPI());
+        apis.add(new GoogleAPI());
     }
 
-    public Room[] requestRooms(int price, int persons, String hotel, String city) {
-        Room[] rooms1 = apis[0].findRooms(price, persons, hotel, city);
-        Room[] rooms2 = apis[1].findRooms(price, persons, hotel, city);
-        Room[] rooms3 = apis[2].findRooms(price, persons, hotel, city);
-        Room[] resultDB = new Room[rooms1.length + rooms2.length + rooms3.length];
-        System.arraycopy(rooms1, 0, resultDB, 0, rooms1.length);
-        System.arraycopy(rooms2, 0, resultDB, rooms1.length, rooms2.length);
-        System.arraycopy(rooms3, 0, resultDB, rooms1.length + rooms2.length, rooms3.length);
-        return resultDB;
+    public List<Room> requestRooms(int price, int persons, String hotel, String city) {
 
-    }
-
-    public Room[] check(API api1, API api2) {
-        Room[] rooms1 = api1.getAllRooms();
-        Room[] rooms2 = api2.getAllRooms();
-        Room[] result = new Room[rooms1.length + rooms2.length];
-        int count = 0;
-        for (int i = 0; i < rooms1.length; i++) {
-            for (int j = 0; j < rooms2.length; j++) {
-                if (rooms1[i].equals(rooms2[j])) {
-                    result[count] = rooms1[i];
-                    count++;
-                }
+        List<Room> resultDB = new ArrayList<>();
+        for (API api : apis) {
+            for (Room room : api.findRooms(price, persons, hotel, city)) {
+                resultDB.add(room);
             }
         }
-        Room[] finalResult = new Room[count];
-        if (count != 0)
-            System.arraycopy(result, 0, finalResult, 0, count);
-        return finalResult;
+
+        return resultDB;
+    }
+
+    public List<Room> check(API api1, API api2) {
+        List<Room> rooms1 = new ArrayList<>();
+        rooms1.addAll(api1.getAllRooms());
+        List<Room> rooms2 = new ArrayList<>();
+        rooms2.addAll(api2.getAllRooms());
+        List<Room> result = new ArrayList<>();
+
+        for (Room ap:rooms1) {
+            for (Room ap2:rooms2) {
+                if (ap.equals(ap2))
+                    result.add(ap);
+
+            }
+        }
+    return result;
     }
 }
